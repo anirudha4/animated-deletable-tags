@@ -1,0 +1,51 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.App {
+  width: 600px;
+  margin: 200px auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  padding: 10px 10px 10px 15px;
+  font-size: 14px;
+  background-color: rgb(238, 246, 255);
+  border-radius: 50px;
+  color: dodgerblue;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.list-item .list {
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.1s;
+}
+.delete {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+
+.list-item:hover .list {
+  transform: translateX(0);
+  left: 0;
+}
+.list-item:hover .delete {
+  background-color: dodgerblue;
+  visibility: visible;
+}
